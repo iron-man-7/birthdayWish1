@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#11151b" />
+  <meta name="description" content="A little belated birthday surprise." />
+  <title>A little birthday note ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="flower flower-one">✿</span>
+    <span class="flower flower-two">✾</span>
+    <span class="flower flower-three">✿</span>
+    <span class="ambient-star star-one">✧</span>
+    <span class="ambient-star star-two">·</span>
+  </div>
+
+  <section id="gate" class="gate" aria-labelledby="gate-title">
+    <div class="gate-card">
+      <div class="little-mark" aria-hidden="true">✿</div>
+      <p class="eyebrow">a tiny surprise</p>
+      <h1 id="gate-title">Just for you.</h1>
+      <p class="gate-copy">There’s a little something waiting inside.</p>
+      <form id="unlock-form" autocomplete="off">
+        <label class="sr-only" for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter the password" required autocomplete="off" autocapitalize="off" spellcheck="false" />
+        <button type="submit">Open your note <span aria-hidden="true">↗</span></button>
+        <p id="password-error" class="form-message" role="alert" aria-live="polite"></p>
+      </form>
+      <p class="gate-foot">a little late, but made with care ♡</p>
+    </div>
+  </section>
+
+  <main id="site-content" hidden>
+    <header class="hero">
+      <div class="hero-clock-mark" aria-hidden="true"><span></span></div>
+      <p class="eyebrow">one tiny belated wish</p>
+      <h1>Belated happy<br><em>birthday!</em></h1>
+      <p class="wish">A little late — but I hope your year is full of good things, more wins, and lots of laughs. ♡</p>
+      <div class="scroll-hint"><span>there’s a little more below</span><span class="down-arrow" aria-hidden="true">↓</span></div>
+    </header>
+
+    <section class="note-section" aria-labelledby="short-note-title">
+      <div class="section-heading">
+        <p class="eyebrow">something I wanted to share</p>
+        <h2 id="short-note-title">Short Note <span aria-hidden="true">♡</span></h2>
+        <p class="section-copy">A little note, made just for you. Tap the photo to read it clearly.</p>
+      </div>
+      <div class="photo-frame" id="photo-frame">
+        <img id="short-note-image" src="assets/short-note.png" alt="A short handwritten note" />
+        <button class="photo-open" id="open-photo" type="button" aria-label="Enlarge the short note">View note <span aria-hidden="true">↗</span></button>
+      </div>
+      <p class="photo-caption">a small note, just for you</p>
+    </section>
+
+    <section class="time-section" aria-labelledby="time-title">
+      <div class="section-heading time-heading">
+        <p class="eyebrow">one last little thing</p>
+        <h2 id="time-title">Time enna achu <span aria-hidden="true">?</span></h2>
+        <p class="section-copy">Just checking the time… ⏱</p>
+      </div>
+      <div class="watch-wrap">
+        <div class="watch-crown" aria-hidden="true"></div>
+        <div class="watch-strap strap-top" aria-hidden="true"></div>
+        <div class="watch-strap strap-bottom" aria-hidden="true"></div>
+        <div class="watch-face" role="img" aria-label="A live analogue clock showing your local time">
+          <svg id="watch-dial" viewBox="0 0 260 260" aria-hidden="true">
+            <circle class="dial-rim" cx="130" cy="130" r="124" />
+            <circle class="dial-inner-rim" cx="130" cy="130" r="117" />
+            <g id="watch-ticks"></g>
+            <g class="dial-numbers">
+              <text x="130" y="48">12</text><text x="211" y="135">3</text><text x="130" y="222">6</text><text x="49" y="135">9</text>
+            </g>
+            <g id="hour-hand-group"><line class="hour-hand" x1="130" y1="132" x2="130" y2="83" /></g>
+            <g id="minute-hand-group"><line class="minute-hand" x1="130" y1="132" x2="130" y2="59" /></g>
+            <g id="second-hand-group"><line class="second-hand" x1="130" y1="145" x2="130" y2="37" /><circle class="second-tail" cx="130" cy="151" r="3.5" /></g>
+            <circle class="hand-pin-outer" cx="130" cy="130" r="7" />
+            <circle class="hand-pin" cx="130" cy="130" r="3" />
+            <text id="watch-brand" x="130" y="174">LITTLE MOMENT</text>
+          </svg>
+        </div>
+        <div class="watch-readout">
+          <span class="readout-label">YOUR LOCAL TIME</span>
+          <time id="digital-clock">--:--:--</time>
+          <span id="clock-date" class="clock-date">Just a moment…</span>
+        </div>
+      </div>
+      <p class="time-caption"><span class="status-dot" aria-hidden="true"></span> Ticking along, just like always</p>
+    </section>
+
+    <footer class="footer">
+      <div class="tiny-rule" aria-hidden="true"></div>
+      <p>Thank you for being my friend. <span aria-hidden="true">♡</span></p>
+      <span class="footer-flower" aria-hidden="true">✿</span>
+    </footer>
+
+    <div class="running-cat" aria-hidden="true"><span>🌸</span><span class="cat-sparkle">✦</span></div>
+  </main>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged short note">
+    <button class="lightbox-close" id="close-lightbox" type="button" aria-label="Close enlarged note">×</button>
+    <img id="lightbox-image" src="assets/short-note.png" alt="Short note, enlarged" />
+    <p>Tap outside or press Esc to close</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
